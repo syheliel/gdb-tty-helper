@@ -2,11 +2,12 @@
 tools to solve `warning: GDB: Failed to set controlling terminal: Operation not permitted`
 
 ## compile
-to make it run, do the following commands:
+In ubuntu22, to make it run, do the following commands:
 ```sh
 sudo apt install libc-dev liburing-dev
 gcc -o gdb-tty-helper gdb-tty-helper.c -luring -lutil
 ```
+In other OS, `liburing-dev` may not be avaliable, try to find a way to install it manually.
 ## usage
 Suppose you have two terminals:
 - A terminal: run gdb
